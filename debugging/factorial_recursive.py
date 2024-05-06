@@ -1,8 +1,18 @@
 #!/usr/bin/python3
+"""Calculate factorial of a number provided as a command-line argument."""
+
 import sys
 
-# Define a function to calculate the factorial of a number
+
 def factorial(n):
+    """Calculate factorial of a non-negative integer.
+
+    Args:
+        n (int): The number whose factorial is to be calculated.
+
+    Returns:
+        int: The factorial of the input number.
+    """
     # Base case: If n is 0, factorial is 1
     if n == 0:
         return 1
@@ -15,4 +25,3 @@ f = factorial(int(sys.argv[1]))
 
 # Print the factorial result
 print(f)
-

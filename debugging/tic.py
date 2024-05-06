@@ -30,7 +30,9 @@ def tic_tac_toe():
             if 0 <= row <= 2 and 0 <= col <= 2:
                 if board[row][col] == " ":
                     board[row][col] = player
-                    player = "O" if player == "X" else "X"
+                    if check_winner(board):
+                        break
+                    player = "X" if player == "0" else "0"
                 else:
                     print("That spot is already taken! Try again.")
             else:
